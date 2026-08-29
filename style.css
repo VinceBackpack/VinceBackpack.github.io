@@ -1,0 +1,175 @@
+body{
+    background-color: #7b7e7b;
+    
+}
+
+.main-nav{
+    background-color: rgb(48, 50, 80);
+    position: sticky;
+    top: 0px;
+    
+}
+.main-nav li:first-child{
+    position:absolute;
+    left:30px;
+}
+.main-nav li:first-child a{
+    text-decoration: none;
+    font-size:24px;
+}
+.main-nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    justify-content: center;
+    padding: 30px;
+}
+.main-nav a {
+    margin: 20px 20px;
+    color: white;
+}
+.main-nav a:visited{
+    color: #c7c9ff;
+}
+.hero {
+  height: calc(100vh - 100px); /* Full screen */
+  background-image: url('HeroBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+section {
+    min-height: 100vh; /*Full screen height */
+    padding: 60px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#project {
+    background-color: #5f638f;
+    color:white;
+}
+#contact {
+    background-color: #3f425e;
+    color: white;
+}
+
+#about {
+    min-height: 100vh;
+    background: #2d2f4a;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.timeline-container {
+    position: relative;
+
+    display: flex;
+    gap: 40px;
+    max-width: 1500px;
+    justify-content: space-between;
+    scroll-snap-type: x mandatory;
+
+    padding: 100px 40px;
+
+    scrollbar-width: none;
+}
+
+.timeline-container::-webkit-scrollbar {
+    display: none;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 115px;
+    left: 40px;
+    right:40px;
+    height: 4px;
+    background: white;
+}
+
+.timeline-item {
+    min-width: 250px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    scroll-snap-align: center;
+    text-align: center;
+}
+
+.marker {
+    width: 24px;
+    height: 24px;
+    background: #c7c9ff;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 4px solid white;
+    transition: 0.3s;
+}
+
+.timeline-item:hover .marker {
+    transform: scale(1.3);
+    background: #ffffff;
+}
+
+@media (max-width: 600px) {
+
+    .timeline-container {
+        display: block;
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+        padding: 40px 20px;
+        overflow: visible;
+    }
+
+    .timeline-line {
+        top: 40px;
+        bottom: 40px;
+        left: 32px;
+        right: auto;
+
+        width: 4px;
+        height: auto;
+    }
+
+    .timeline-item {
+        position: relative;
+
+        width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        text-align: left;
+
+        padding-left: 60px;
+
+        margin-bottom: 60px;
+    }
+
+    .marker {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        margin: 0;
+    }
+}
