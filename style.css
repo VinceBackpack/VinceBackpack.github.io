@@ -188,9 +188,26 @@ section {
     font-size: 14px;
 }
 
-#contact {/*Contact Me footer*/
+#contact {
+    padding: 0px 20px;
+    text-align: center;
     background-color: #3f425e;
     color: white;
+}
+.contact-links{
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    text-decoration: none;
+}
+.contact-links a:link {
+    color: white;
+}
+.contact-links a:visited {
+    color: white;
+}
+footer {
+    text-align: center;
 }
 
 @media (max-width: 600px) {
