@@ -39,7 +39,6 @@ function updateGallery() {
 
         carousel.src = images[i];
         carousel.alt = "UAE Homes screenshot " + (i + 1);
-
         carousel.classList.add("carousel");
 
         // Highlight current image
@@ -49,18 +48,12 @@ function updateGallery() {
 
         // Clicking a thumbnail changes the main image
         carousel.addEventListener("click", () => {
-
             currentImage = i;
-
             updateGallery();
-
         });
-
         carouselContainer.appendChild(carousel);
     }
 }
-
-
 // MAIN IMAGE NEXT BUTTON
 document.querySelector(".next").addEventListener("click", () => {
 
@@ -70,9 +63,7 @@ document.querySelector(".next").addEventListener("click", () => {
     if (currentImage >= images.length) {
         currentImage = 0;
     }
-
     updateGallery();
-
 });
 
 
@@ -80,16 +71,12 @@ document.querySelector(".next").addEventListener("click", () => {
 document.querySelector(".prev").addEventListener("click", () => {
 
     currentImage--;
-
     // Loop to last image
     if (currentImage < 0) {
         currentImage = images.length - 1;
     }
-
     updateGallery();
-
 });
-
 
 // Create thumbnails immediately when page loads
 updateGallery();
